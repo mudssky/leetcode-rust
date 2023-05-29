@@ -10,7 +10,17 @@
 /// 返回 k 。
 #[doc = include_str!("./docs/0026. Remove Duplicates from Sorted Array.md")]
 pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
-    22
+    let mut slow = 0;
+    let mut fast = 0;
+    while fast < nums.len() {
+        if nums[fast] != nums[slow] {
+            slow += 1;
+            nums[slow] = nums[fast]
+        }
+        fast += 1;
+    }
+
+    return (slow + 1) as i32;
 }
 
 /// 27 Remove Element  
