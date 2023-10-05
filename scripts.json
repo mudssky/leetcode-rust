@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "doc": "watchexec.exe --restart --clear  --exts rs cargo doc --no-deps",
+    "test": "cargo test --tests"
+  }
+}
